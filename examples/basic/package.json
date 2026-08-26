@@ -1,0 +1,18 @@
+{
+  "name": "mailtrap-chat-sdk-basic-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx server.ts"
+  },
+  "dependencies": {
+    "@chat-adapter/state-memory": "4.38.1",
+    "@mailtrap/chat-sdk-adapter": "file:../..",
+    "chat": "4.38.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.0"
+  }
+}
