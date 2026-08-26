@@ -1,0 +1,67 @@
+{
+  "name": "@mailtrap/chat-sdk-adapter",
+  "version": "0.1.0",
+  "description": "Vercel Chat SDK adapter for Mailtrap email",
+  "author": "Railsware Products Studio LLC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mailtrap/mailtrap-chat-sdk.git"
+  },
+  "homepage": "https://github.com/mailtrap/mailtrap-chat-sdk",
+  "bugs": {
+    "url": "https://github.com/mailtrap/mailtrap-chat-sdk/issues"
+  },
+  "keywords": [
+    "mailtrap",
+    "email",
+    "chat",
+    "chat-adapter",
+    "adapter",
+    "vercel",
+    "chat-sdk",
+    "webhook"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "test:integration": "tsx scripts/integration-check.ts"
+  },
+  "peerDependencies": {
+    "chat": "^4.15.0"
+  },
+  "dependencies": {
+    "hast-util-to-html": "^9.0.5",
+    "mailtrap": "^4.8.0",
+    "mdast-util-to-hast": "^13.2.1"
+  },
+  "devDependencies": {
+    "@chat-adapter/state-memory": "4.38.1",
+    "@types/mdast": "4.0.4",
+    "@types/node": "22.20.1",
+    "chat": "4.38.1",
+    "tsx": "4.20.5",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  },
+  "files": [
+    "dist"
+  ]
+}
